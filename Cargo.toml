@@ -1,0 +1,14 @@
+[package]
+name = "address_search"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hex = "0.4.3"
+create2 = "0.0.2"
+chrono = "0.4"
+num_cpus = "1.13"
+lazy_static = "1.4"
+regex = "1.6"

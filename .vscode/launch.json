@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'address_search'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=address_search",
+                    "--package=address_search"
+                ],
+                "filter": {
+                    "name": "address_search",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "bc36789e7a1e281436464229828f817d6612f7b477d66591ff96a9e064bcc98a",
+                ".*000000.*"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'addressSearch'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=addressSearch",
+                    "--package=addressSearch"
+                ],
+                "filter": {
+                    "name": "addressSearch",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
